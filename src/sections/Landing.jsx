@@ -45,6 +45,7 @@ const LandingPage = () => (
         query SiteTitleQuery {
           contentfulAbout {
             name
+            description
             roles
             socialLinks {
               id
@@ -56,7 +57,7 @@ const LandingPage = () => (
         }
       `}
       render={data => {
-        const { name, socialLinks, roles } = data.contentfulAbout;
+        const { name, socialLinks, roles, description } = data.contentfulAbout;
 
         return (
           <Fragment>
@@ -67,7 +68,16 @@ const LandingPage = () => (
               fontSize={[5, 6, 8]}
               mb={[3, 4, 5]}
             >
-              {`Hello, I'm ${name}!`}
+              {`We are ${name}!`}
+            </Heading>
+            <Heading
+              textAlign="center"
+              is="h1"
+              color="primary"
+              fontSize={[5, 6, 7]}
+              mb={[3, 4, 5]}
+            >
+              {`${description}`}
             </Heading>
 
             <Heading
