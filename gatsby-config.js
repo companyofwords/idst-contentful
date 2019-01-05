@@ -43,6 +43,42 @@ module.exports = client.getEntries().then(entries => {
           username: about.mediumUser,
         },
       },
+      {
+        resolve: `gatsby-plugin-pinterest`,
+        options: {
+          // Set to true to display a bigger button
+          tall: true, // default
+          // Set to true to hide the text and display only a round P button
+          round: false // default
+        }
+      },
+      {
+        resolve: "gatsby-source-graphql",
+        options: {
+          // This type will contain remote schema Query type
+          typeName: "SWAPI",
+          // This is field under which it's accessible
+          fieldName: "swapi",
+          // Url to query from
+          url: "https://api.graphcms.com/simple/v1/swapi",
+        },
+      },
+      //{
+      //  resolve: "gatsby-source-graphql",
+      //  options: {
+      //    typeName: "GitHub",
+      //    fieldName: "github",
+          // Url to query from
+      //    url: "https://api.github.com/graphql", //"https://api.pinterest.com/graphql/v1/boards/neilputtick/happenings/",
+          // HTTP headers
+      //    headers: {
+            // Learn about environment variables: https://gatsby.app/env-vars
+      //      Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+      //    },
+      //    // Additional options to pass to node-fetch
+      //    fetchOptions: {},
+      //  },
+      //},
       'gatsby-transformer-remark',
       'gatsby-plugin-offline',
     ],

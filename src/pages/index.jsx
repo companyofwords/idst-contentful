@@ -5,6 +5,7 @@ import About from '../sections/About';
 import Projects from '../sections/Projects';
 import Events from '../sections/Events';
 import Writing from '../sections/Writing';
+import Artworks from '../sections/Artworks';
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <Projects />
     <Events />
     <Writing />
+    <Artworks />
   </Layout>
 );
 
