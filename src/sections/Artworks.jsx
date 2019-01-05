@@ -43,7 +43,7 @@ const Background = () => (
 );
 
 const Title = styled(Subhead)`
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   display: table;
@@ -107,7 +107,7 @@ const Artwork = ({
   logo,
 }) => (
   <Card p={0}>
-    <Flex css={{ height: '200px' }}>
+    <Flex css={{ height: '500px' }}>
       <TextContainer>
         <span>
           <Title my={2} pb={1}>
@@ -184,7 +184,7 @@ const Artworks = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
+        <CardContainer minWidth="500px">
           {contentfulAbout.artworks.map((p, i) => (
             <Fade bottom delay={i * 200}>
               <Artwork key={p.id} {...p} />
