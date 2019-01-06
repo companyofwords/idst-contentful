@@ -6,13 +6,13 @@ import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
+import ImageTriangle from '../components/ImageTriangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 import Logo from '../components/Logo/Portfolio.svg';
 
 const Background = () => (
   <div>
-    
-    <Triangle
+<Triangle
       color="secondaryLight"
       height={['50vh', '20vh']}
       width={['50vw', '50vw']}
@@ -30,6 +30,13 @@ const Background = () => (
       color="backgroundDark"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
+    />
+
+<ImageTriangle
+      color="primaryDark"
+      image={"https://www.fillmurray.com/640/360"}
+      height={['80vh', '20vh']}
+      width={['80vw', '50vw']}
     />
     <Image
                 src={Logo}
