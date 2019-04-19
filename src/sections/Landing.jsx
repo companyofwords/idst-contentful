@@ -10,26 +10,26 @@ import Triangle from '../components/Triangle';
 const Background = () => (
   <div>
     <Triangle
-      color="backgroundDark"
-      height={['35vh', '80vh']}
-      width={['95vw', '60vw']}
+      color="darkBlue"
+      height={['35vh', '50vh']}
+      width={['95vw', '20vw']}
     />
 
     <Triangle
-      color="secondary"
+      color="lightPurple"
       height={['38vh', '80vh']}
-      width={['50vw', '35vw']}
+      width={['50vw', '5vw']}
     />
 
     <Triangle
-      color="primaryDark"
+      color="darkBlue"
       height={['25vh', '35vh']}
       width={['75vw', '60vw']}
       invertX
     />
 
     <Triangle
-      color="backgroundDark"
+      color="lightPurple"
       height={['20vh', '20vh']}
       width={['100vw', '100vw']}
       invertX
@@ -46,6 +46,7 @@ const LandingPage = () => (
           contentfulAbout {
             name
             description
+            openingtimes
             roles
             socialLinks {
               id
@@ -57,7 +58,7 @@ const LandingPage = () => (
         }
       `}
       render={data => {
-        const { name, socialLinks, roles, description } = data.contentfulAbout;
+        const { name, socialLinks, roles, openingtimes, description } = data.contentfulAbout;
 
         return (
           <Fragment>
@@ -81,31 +82,15 @@ const LandingPage = () => (
             </Heading>
 
             <Heading
+              textAlign="center"
               is="h2"
               color="primary"
-              fontSize={[4, 5, 6]}
-              mb={[2, 4]}
-              textAlign="center"
+              fontSize={[2, 3, 4]}
+              mb={[3, 4, 5]}
             >
-              <TextLoop>
-                {roles.map(text => (
-                  <p style={{ width: 400 }} key={text}>
-                    {text}
-                  </p>
-                ))}
-              </TextLoop>
+              {`${openingtimes}`}
             </Heading>
-            <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
-              {socialLinks.map(({ id, ...rest }) => (
-                <Label mx={3} fontSize={[5, 6, 6]} key={id}>
-                  <SocialLink
-                    color="primary"
-                    hoverColor="primaryLight"
-                    {...rest}
-                  />
-                </Label>
-              ))}
-            </Flex>
+
             <MouseIcon />
           </Fragment>
         );

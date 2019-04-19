@@ -160,7 +160,7 @@ const Event = ({
 
 const Events = () => (
   <Section.Container id="events" Background={Background}>
-    <Section.Header name="Events" icon="💻" label="notebook" />
+    <Section.Header name="Events" icon="" label="notebook" />
     <StaticQuery
       query={graphql`
         query EventsQuery {

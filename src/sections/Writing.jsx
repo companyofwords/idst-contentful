@@ -97,7 +97,7 @@ const edgeToArray = data => data.edges.map(edge => edge.node);
 
 const Writing = () => (
   <Section.Container id="writing" Background={Background}>
-    <Section.Header name="Writing" icon="✍️" label="writing" />
+    <Section.Header name="Writing" icon="" label="writing" />
     <StaticQuery
       query={graphql`
         query MediumPostQuery {

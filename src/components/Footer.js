@@ -8,7 +8,7 @@ import GatsbyLogo from './Logo/Gatsby.svg';
 
 const FooterContainer = styled.footer`
   padding: 1em;
-  background: ${props => props.theme.colors.primaryDark};
+  background: ${props => `url("${props.theme.backgroundImages.idstbackground}") repeat center center`}; 
   color: ${props => props.theme.colors.background};
   display: flex;
   flex: 0 1 auto;
@@ -17,7 +17,7 @@ const FooterContainer = styled.footer`
   align-items: center;
 `;
 
-const RenponsiveLogo = styled.img`
+const ResponsiveLogo = styled.img`
   width: 100px;
   height: 25px;
 
@@ -30,7 +30,7 @@ const RenponsiveLogo = styled.img`
 const Logo = ({ url, logo, alt = '' }) => (
   <Box>
     <a href={url} rel="noopener noreferrer" target="_blank">
-      <RenponsiveLogo src={logo} alt={alt} />
+      <ResponsiveLogo src={logo} alt={alt} />
     </a>
   </Box>
 );
@@ -54,25 +54,10 @@ const Footer = () => (
             display: 'table',
           }}
         >
-          Powered By
+          IDST!
         </Text>
       </span>
       <Flex justifyContent="center" alignItems="center">
-        <Logo
-          url="https://www.contentful.com/"
-          logo={ContentfulLogo}
-          alt="Powered by Contentful"
-        />
-        <Text m={2} fontSize={4}>
-          <span role="img" aria-label="heart">
-            ❤️
-          </span>
-        </Text>
-        <Logo
-          url="https://www.gatsbyjs.org/"
-          logo={GatsbyLogo}
-          alt="Gatsby Logo"
-        />
       </Flex>
     </Fade>
   </FooterContainer>

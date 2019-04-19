@@ -47,7 +47,7 @@ const LinkAnimated = styled.span`
   padding-bottom: 5px;
   color: inherit;
   border-bottom: ${props =>
-    `${props.borderWidth} dashed ${props.theme.colors.primaryLight}`};
+    `${props.borderWidth} solid ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
 
   &:after {

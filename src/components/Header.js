@@ -5,13 +5,14 @@ import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import Fade from 'react-reveal/Fade';
 import RouteLink from './RouteLink';
-import Logo from './Logo/Portfolio.svg';
+import Logo from './Logo/idst-logo.png';
+import LogoBackground from './Logo/idstBluePostBackground.jpg';
 
 const capitalize = s => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   .headroom--pinned {
-    background: ${props => props.theme.colors.primaryDark};
+    background: ${props => `url(${props.theme.backgroundImages.idstbackground}) repeat center center`}; 
   }
 
   position: absolute;
@@ -51,8 +52,8 @@ const Header = () => (
             const homeLink = home && (
               <Image
                 src={Logo}
-                width="50px"
-                alt="Portfolio Logo"
+                width="250px"
+                alt="IDST! Logo with blue and white"
                 onClick={home.onClick}
               />
             );

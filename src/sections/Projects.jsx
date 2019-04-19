@@ -160,7 +160,7 @@ const Project = ({
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+    <Section.Header name="Projects" icon="" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
@@ -184,7 +184,7 @@ const Projects = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
+        <CardContainer minWidth="500px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade bottom delay={i * 200}>
               <Project key={p.id} {...p} />

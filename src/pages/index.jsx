@@ -13,7 +13,6 @@ const IndexPage = () => (
     <About />
     <Projects />
     <Events />
-    <Writing />
     <Artworks />
   </Layout>
 );
